@@ -2,29 +2,32 @@
 
 var app = window.app;
 
-var routeCurrentParams = function(routeCurrent) {
-  return routeCurrent ? routeCurrent.params : "undefined";
-}
-
 app.controller('OuterCtrl', function ($scope, $route, $timeout) {
 
-  // console.log('$route from OuterCtrl: ', $route);
-  // $timeout(function() {
-  //   console.log('$route from OuterCtrl almost immediately later: ', $route);
-  // }, 0);
-  // $timeout(function() {
-  //   console.log('$route from OuterCtrl after one second: ', $route);
-  // }, 1000);
+  console.log('$route from OuterCtrl upon instantiation of the controller: ', $route);
+  console.log('$route.current from OuterCtrl upon instantiation of the controller: ', $route.current);
+  console.log('$route.current.params from OuterCtrl upon instantiation of the controller: ', $route.current ? $route.current.params : undefined);
+  console.log('\n');
 
-  console.log('$route.current.params from OuterCtrl: ', routeCurrentParams($route.current));
   $timeout(function() {
-    console.log('$route from OuterCtrl immediately: ', routeCurrentParams($route.current));
+    console.log('$route from OuterCtrl after 0 seconds (next JavaScript event loop tick): ', $route);
+    console.log('$route.current from OuterCtrl after 0 seconds (next JavaScript event loop tick): ', $route.current);
+    console.log('$route.current.params from OuterCtrl after 0 seconds (next JavaScript event loop tick): ', $route.current ? $route.current.params : undefined);
+    console.log('\n');
   }, 0);
+
   $timeout(function() {
-    console.log('$route from OuterCtrl after 20 milliseconds: ', routeCurrentParams($route.current));
+    console.log('$route from OuterCtrl after 20 milliseconds: ', $route);
+    console.log('$route.current from OuterCtrl after 20 milliseconds: ', $route.current);
+    console.log('$route.current.params from OuterCtrl after 20 milliseconds: ', $route.current ? $route.current.params : undefined);
+    console.log('\n');
   }, 20);
+
   $timeout(function() {
-    console.log('$route from OuterCtrl after one second: ', routeCurrentParams($route.current));
+    console.log('$route from OuterCtrl after one second: ', $route);
+    console.log('$route.current from OuterCtrl after one second: ', $route.current);
+    console.log('$route.current.params from OuterCtrl after one second: ', $route.current ? $route.current.params : undefined);
+    console.log('\n');
   }, 1000);
 
 });
