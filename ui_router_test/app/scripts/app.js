@@ -1,6 +1,6 @@
 'use strict';
 
-var app = window.app = angular.module('testooApp', [
+var app = window.app = angular.module('uiRouterTestApp', [
   'ngResource',
   'ui.router'
 ]);

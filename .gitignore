@@ -1,11 +1,11 @@
-ui_router_system/node_modules
-ui_router_system/dist
-ui_router_system/.tmp
-ui_router_system/.sass-cache
-ui_router_system/app/bower_components
+ng_route_test/node_modules
+ng_route_test/dist
+ng_route_test/.tmp
+ng_route_test/.sass-cache
+ng_route_test/app/bower_components
 
-ng_route_system/node_modules
-ng_route_system/dist
-ng_route_system/.tmp
-ng_route_system/.sass-cache
-ng_route_system/app/bower_components
+ui_router_test/node_modules
+ui_router_test/dist
+ui_router_test/.tmp
+ui_router_test/.sass-cache
+ui_router_test/app/bower_components
