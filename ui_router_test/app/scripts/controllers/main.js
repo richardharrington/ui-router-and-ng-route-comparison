@@ -4,26 +4,25 @@ var app = window.app;
 
 app.controller('MainCtrl', function ($scope, $state, $stateParams, $timeout) {
 
-  console.log('$state from MainCtrl upon instantiation of the controller: ', $state);
-  console.log('$stateParams from MainCtrl upon instantiation of the controller: ', $stateParams);
-  console.log('\n');
+  var logit = function(whatTime) {
+    console.log('$state from MainCtrl ' + whatTime + ': ', $state);
+    console.log('$stateParams from MainCtrl ' + whatTime + ': ', $stateParams);
+    console.log('\n');
+  };
+
+  logit('upon instantiation of the controller');
 
   $timeout(function() {
-    console.log('$state from MainCtrl after 0 seconds (next JavaScript event loop tick): ', $state);
-    console.log('$stateParams from MainCtrl 0 seconds (next JavaScript event loop tick): ', $stateParams);
-    console.log('\n');
+    logit('after 0 seconds (next JavaScript event loop tick)');
   }, 0);
 
   $timeout(function() {
-    console.log('$state from MainCtrl after 20 milliseconds: ', $state);
-    console.log('$stateParams from MainCtrl after 20 milliseconds: ', $stateParams);
-    console.log('\n');
+    logit('after 20 milliseconds');
   }, 20);
 
   $timeout(function() {
-    console.log('$state from MainCtrl after one second: ', $state);
-    console.log('$stateParams from MainCtrl after one second: ', $stateParams);
-    console.log('\n');
+    logit('after one second');
   }, 1000);
 
 });
+
