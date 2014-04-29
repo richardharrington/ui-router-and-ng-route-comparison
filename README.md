@@ -11,7 +11,9 @@ This repo contains two projects created by yeoman.
 2. In each of the two project directories in this repo, do the following:
 
     npm install
+    
     bower install
+    
     grunt server
     
 3. Go to the websites that have opened up, and look at the console. Then go to the url bar and add the following to the end of the url: "/#/stuff/42"
