@@ -1,5 +1,5 @@
 {
-  "name": "testo",
+  "name": "ui_router_test",
   "version": "0.0.0",
   "dependencies": {
     "angular": "~1.2.0",
